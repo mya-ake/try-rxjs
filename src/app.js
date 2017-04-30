@@ -1,3 +1,3 @@
-import './css/styles.css';
+import './css/styles.css'
 
-console.log('test');
+import './js/rx.js'
