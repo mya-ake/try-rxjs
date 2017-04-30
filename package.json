@@ -1,0 +1,25 @@
+{
+  "name": "try-rxjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mya-ake",
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "cross-env NODE_ENV=development webpack --watch -d & browser-sync start --config bs-config.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "postcss": "^5.2.17",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.3.3",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "normalize.css": "^6.0.0",
+    "rx": "^4.1.0"
+  }
+}

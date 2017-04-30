@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "globals": {
+        "Vue": true,
+        "VueResource": true,
+        "VueRouter": true,
+        "Vuex": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "info",
+                    "error"
+                ]
+            }
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline"
+        ],
+        "no-implicit-coercion": "error",
+        "default-case": "error",
+        "eqeqeq": "error",
+        "no-shadow": "error",
+        "no-unreachable": "error",
+        "no-var": "error"
+    }
+}
