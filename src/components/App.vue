@@ -9,6 +9,9 @@
       <v-content>
         <v-container>
           <my-header></my-header>
+
+          <form-todo></form-todo>
+
         </v-container>
       </v-content>
     </main>
@@ -19,11 +22,13 @@
 </template>
 
 <script>
-  import Header from './Header.vue';
+  import Header from './Header.vue'
+  import Form from './Form.vue'
 
   export default {
     components: {
       'my-header': Header,
+      'form-todo': Form,
     },
   }
 </script>
