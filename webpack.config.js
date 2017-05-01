@@ -32,6 +32,19 @@ module.exports = {
           ],
         }),
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            // postcss: 'vue-style-loader!css-loader!postcss-loader',
+          },
+        },
+      },
+      {
+        test: /\.styl$/,
+        loader: ['style-loader', 'css-loader', 'stylus-loader'],
+      },
     ],
   },
   plugins: [

@@ -1,3 +1,2 @@
-import './css/styles.css'
-
 import './js/rx.js'
+import './js/render.js'
