@@ -21,6 +21,8 @@
     "webpack": "^2.4.1"
   },
   "dependencies": {
+    "buble": "^0.15.2",
+    "buble-loader": "^0.4.1",
     "rx": "^4.1.0",
     "vue": "^2.3.0"
   }
