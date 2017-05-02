@@ -56,6 +56,11 @@ module.exports = {
   plugins: [
     extractPostCSS,
   ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.common.js',
+    },
+  },
 };
 
 switch (process.env.NODE_ENV) {
