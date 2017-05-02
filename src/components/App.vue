@@ -12,6 +12,8 @@
 
           <form-todo></form-todo>
 
+          <task-list></task-list>
+
         </v-container>
       </v-content>
     </main>
@@ -24,11 +26,13 @@
 <script>
   import Header from './Header.vue'
   import Form from './Form.vue'
+  import TaskList from './TaskList.vue'
 
   export default {
     components: {
       'my-header': Header,
       'form-todo': Form,
+      'task-list': TaskList,
     },
   }
 </script>

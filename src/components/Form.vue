@@ -2,7 +2,7 @@
   <div class="mt-5">
     <h3 class="headline">New task</h3>
     <form v-on:submit.prevent="submit">
-      <v-text-field name="task" label="title" v-model="task"></v-text-field>
+      <v-text-field name="task" label="title" v-model="newTask"></v-text-field>
       <v-btn type="submit" primary dark>Add</v-btn>
     </form>
   </div>
@@ -13,13 +13,15 @@
     name: 'form-todo',
     data() {
       return {
-        task: '',
+        newTask: '',
       }
     },
     methods: {
       submit() {
-        console.log('submit');
-        console.log(this.task);
+        console.log('submit')
+        console.log(this.newTask)
+        this.$store.dispatch('addTask', this.newTask)
+        this.newTask = ''
       },
     },
   }
