@@ -9,6 +9,7 @@ Vue.js と Vuetify.js を使ってる。
 
 （あれ、これ RxJS 使うのか？ってなってきてる）
 
+そしてVuexまで導入された。（RxJSはどこに......
 
 ## Reference material
 
