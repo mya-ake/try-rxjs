@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
+    "buble": "^0.15.2",
+    "buble-loader": "^0.4.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -21,9 +23,8 @@
     "webpack": "^2.4.1"
   },
   "dependencies": {
-    "buble": "^0.15.2",
-    "buble-loader": "^0.4.1",
     "rx": "^4.1.0",
+    "rxjs-es": "^5.0.0-beta.12",
     "vue": "^2.3.0",
     "vuex": "^2.3.1"
   }
