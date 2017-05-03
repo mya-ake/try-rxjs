@@ -9,6 +9,8 @@
 </template>
 
 <script>
+  import Task from './../js/models/Task'
+
   export default {
     name: 'form-todo',
     data() {
@@ -20,7 +22,7 @@
       submit() {
         console.log('submit')
         console.log(this.newTask)
-        this.$store.dispatch('addTask', this.newTask)
+        this.$store.dispatch('addTask', Task.create({title: this.newTask}))
         this.newTask = ''
       },
     },
