@@ -11,6 +11,8 @@ Vue.js と Vuetify.js を使ってる。
 
 そしてVuexまで導入された。（RxJSはどこに......
 
+新しいタスク作るときのイベントにRxJS導入中
+
 ## Reference material
 
 Qiitaの記事を参考に
