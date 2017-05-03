@@ -10,6 +10,7 @@
 
 <script>
   import Task from './../js/models/Task'
+  import * as Rx from 'rxjs-es'
 
   export default {
     name: 'form-todo',
@@ -20,10 +21,14 @@
     },
     methods: {
       submit() {
-        console.log('submit')
-        console.log(this.newTask)
-        this.$store.dispatch('addTask', Task.create({title: this.newTask}))
-        this.newTask = ''
+        Rx.Observable.of(this.newTask)
+          .map((value) => {
+            return value.trim()
+          })
+          .subscribe((value) => {
+            this.$store.dispatch('addTask', Task.create({title: value}))
+            this.newTask = ''
+          })
       },
     },
   }
