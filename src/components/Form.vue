@@ -37,10 +37,7 @@
             // エラー初期化
             this.newTaskErrors = []
           })
-          .map((value) => {
-            // トリム
-            return value.trim()
-          })
+          .map((value) => value.trim())  // トリム
           .do(throwWhenEmpty)  // 空チェック
           .subscribe(
             (value) => {
