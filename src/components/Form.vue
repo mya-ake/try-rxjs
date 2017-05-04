@@ -11,7 +11,16 @@
 <script>
   import Task from './../js/models/Task'
   import FormException from './../js/exceptions/FormException'
+  import {isEmptyString} from './../js/lib/validations'
   import * as Rx from 'rxjs-es'
+
+  const throwWhenEmpty = (testValue) => {
+    if (isEmptyString(testValue)) {
+      throw new FormException({
+        message: 'Empty'
+      })
+    }
+  }
 
   export default {
     name: 'form-todo',
@@ -32,16 +41,7 @@
             // トリム
             return value.trim()
           })
-          .do(
-            // バリデーション
-            (value) => {
-              if (value === '') {
-                throw new FormException({
-                  message: 'Empty'
-                })
-              }
-            }
-          )
+          .do(throwWhenEmpty)  // 空チェック
           .subscribe(
             (value) => {
               this.$store.dispatch('addTask', Task.create({title: value}))
