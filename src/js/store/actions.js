@@ -6,4 +6,10 @@ export default {
       task: task,
     })
   },
+  setTask({ commit }, data) {
+    commit(TYPES.SET_TASK, {
+      index: data.index,
+      task: data.task,
+    })
+  },
 }
