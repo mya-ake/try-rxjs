@@ -12,7 +12,7 @@
   import Task from './../js/models/Task'
   import FormException from './../js/exceptions/FormException'
   import {isEmptyString} from './../js/lib/validations'
-  import * as Rx from 'rxjs-es'
+  import {Observable} from './../js/rx/Observable'
 
   const throwWhenEmpty = (testValue) => {
     if (isEmptyString(testValue)) {
@@ -32,7 +32,7 @@
     },
     methods: {
       submit() {
-        Rx.Observable.of(this.newTask)
+        Observable.of(this.newTask)
           .do(() => {
             // エラー初期化
             this.newTaskErrors = []
