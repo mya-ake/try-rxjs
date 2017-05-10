@@ -1,6 +1,7 @@
 <template>
   <section class="mt-4">
     <h3 class="headline">Task list</h3>
+    <p v-show="$store.state.tasks.length === 0">No task.</p>
     <v-list two-line subheader>
       <v-list-item v-for="(task, index) in $store.state.tasks" v-bind:key="'task-' + index">
         <v-list-tile avatar>
