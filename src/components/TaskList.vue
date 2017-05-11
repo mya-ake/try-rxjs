@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-4">
+  <section class="mt-4 mb-4">
     <h3 class="headline">Task list</h3>
     <p v-show="$store.state.tasks.length === 0">No task.</p>
     <v-list two-line subheader>
@@ -14,6 +14,8 @@
         </v-list-tile>
       </v-list-item>
     </v-list>
+    <h4 class="title">Remove completed task.</h4>
+    <v-btn type="button" error v-bind:disabled="activeRemoveBtn">Remove</v-btn>
   </section>
 </template>
 
@@ -29,5 +31,10 @@
         })
       }
     },
+    computed: {
+      activeRemoveBtn() {
+        return this.$store.state.tasks.filter(task => task.completed).length === 0
+      },
+    }
   }
 </script>
