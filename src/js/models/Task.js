@@ -1,13 +1,13 @@
 class Task {
-  constructor({ title, done }) {
+  constructor({ title, completed }) {
     this.title = title
-    this.done = done
+    this.completed = completed
   }
 
   static create({title}) {
     return new Task({
       title: title,
-      done: false,
+      completed: false,
     })
   }
 }
