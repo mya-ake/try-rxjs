@@ -6,7 +6,7 @@
       <v-list-item v-for="(task, index) in $store.state.tasks" v-bind:key="'task-' + index">
         <v-list-tile avatar>
           <v-list-tile-action>
-            <v-checkbox v-bind:input-value="task.completed" v-on:change="updateDone(task, index)" success light />
+            <v-checkbox v-bind:input-value="task.completed" v-on:change="toggleTaskCompleted(task, index)" success light />
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>{{task.title}}</v-list-tile-title>
@@ -23,7 +23,7 @@
   export default {
     name: 'task-list',
     methods: {
-      updateDone(task, index) {
+      toggleTaskCompleted(task, index) {
         task.completed = !task.completed
         this.$store.dispatch('setTask', {
           index: index,
