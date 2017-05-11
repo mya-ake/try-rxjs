@@ -15,7 +15,7 @@
       </v-list-item>
     </v-list>
     <h4 class="title">Remove completed task.</h4>
-    <v-btn type="button" error v-bind:disabled="activeRemoveBtn">Remove</v-btn>
+    <v-btn type="button" v-on:click.native="clickRemove" error v-bind:disabled="activeRemoveBtn">Remove</v-btn>
   </section>
 </template>
 
@@ -29,7 +29,10 @@
           index: index,
           task: task,
         })
-      }
+      },
+      clickRemove() {
+        this.$store.dispatch('removeCompletedTask')
+      },
     },
     computed: {
       activeRemoveBtn() {

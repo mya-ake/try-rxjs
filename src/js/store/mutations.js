@@ -10,4 +10,8 @@ mutations[TYPES.SET_TASK] = (state, payload) => {
   state.tasks[payload.index] = payload.task
 }
 
+mutations[TYPES.REMOVE_COMPLETED_TASK] = (state) => {
+  state.tasks = state.tasks.filter(task => !task.completed)
+}
+
 export default mutations

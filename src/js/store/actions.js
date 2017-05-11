@@ -12,4 +12,7 @@ export default {
       task: data.task,
     })
   },
+  removeCompletedTask({ commit }) {
+    commit(TYPES.REMOVE_COMPLETED_TASK)
+  },
 }
